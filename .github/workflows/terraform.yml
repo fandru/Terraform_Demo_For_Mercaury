@@ -1,20 +1,45 @@
-name: 'Terraform'
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@fandru 
+vikramshinde12
+/
+terraform-gcp-github-actions
+Public
+Code
+Issues
+Pull requests
+2
+Actions
+Projects
+Security
+Insights
+terraform-gcp-github-actions/.github/workflows/workflow.yaml
+
+vikram Added environment for GCS init
+Latest commit 599e334 on 13 Nov 2020
+ History
+ 0 contributors
+51 lines (41 sloc)  1.79 KB
+
+name: 'Terraform CI'
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+    - main
   pull_request:
-
-permissions:
-  contents: read
 
 jobs:
   terraform:
     name: 'Terraform'
     runs-on: ubuntu-latest
-    environment: production
 
-    # Use the Bash shell regardless  whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
+    # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
     defaults:
       run:
         shell: bash
@@ -22,7 +47,7 @@ jobs:
     steps:
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v2
 
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
     - name: Setup Terraform
@@ -41,14 +66,15 @@ jobs:
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
-      run: terraform plan 
+      run: terraform plan
       env:
         GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
 
-      # On push to "main", build or change infrastructure according to Terraform configuration files
+      # On push to main, build or change infrastructure according to Terraform configuration files
       # Note: It is recommended to set up a required "strict" status check in your repository for "Terraform Cloud". See the documentation on "strict" required status checks for more information: https://help.github.com/en/github/administering-a-repository/types-of-required-status-checks
     - name: Terraform Apply
-      if: github.ref == 'refs/heads/"main"' && github.event_name == 'push'
+      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
       run: terraform apply -auto-approve
       env:
         GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+vikramshinde12/terraform-gcp-github-actions: Automating Terraform Deployment to Google Cloud with GitHub Actions.terraform-gcp-github-actions/workflow.yaml at main · vikramshinde12/terraform-gcp-github-actions
