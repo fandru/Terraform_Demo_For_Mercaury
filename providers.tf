@@ -5,7 +5,7 @@ provider "google" {
 
 terraform {
   backend "gcs" {
-    bucket = "my_newbucket_nelson"
+    bucket = "mybtcbucket"
     prefix = "terraform/state"
   }
 }
