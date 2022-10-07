@@ -4,9 +4,9 @@ provider "google" {
 }
 
 terraform {
-  backend "gcs" {
-    bucket = "mybtcbucket"
-    prefix = "terraform/state"
+    backend "gcs" {
+    bucket = "mymercaurybucket_1"
+      
   }
 }
 
