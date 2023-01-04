@@ -33,6 +33,7 @@ pipeline {
                 sh 'git init'
                 sh 'git add .'
                 sh 'git commit -m "first commit"' 
+                sh 'git remote remove github'
                 sh 'git remote -v'
                 
                 
