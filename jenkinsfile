@@ -17,9 +17,9 @@ pipeline {
                 sh 'git config --global user.name' 
                 sh 'pwd'
                 
-                sh 'rm -r Terraform_Demo_For_Mercaury/*'
+                
                 sh 'ls -al'
-                sh 'rmdir Terraform_Demo_For_Mercaury'
+                
                
                 sh 'git init'
                 
