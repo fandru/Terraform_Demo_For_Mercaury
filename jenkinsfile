@@ -17,6 +17,8 @@ pipeline {
                 sh 'git config --global user.name' 
                 sh 'pwd'
                 sh 'ls -al'
+                sh 'git init'
+                sh 'git clone https://github.com/fandru/Terraform_Demo_For_Mercaury.git'
                 sh 'echo "files checkedout"'
           }    
           
