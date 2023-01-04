@@ -42,9 +42,9 @@ pipeline {
                 sh 'git commit -m "first commit"'    
                 sh 'git remote -v'
                 sh 'git remote remove origin'
-                sh 'git remote set-url qa https://github.com/fandru/gcs-demo-mercaury.git'
+                sh 'git remote set-url dev https://github.com/fandru/gcs-demo-mercaury.git'
                 sh 'git remote -v'
-                sh 'git push origin qa'
+                sh 'git push origin dev'
 
 
                             
