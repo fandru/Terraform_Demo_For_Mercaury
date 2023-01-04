@@ -26,6 +26,10 @@ pipeline {
                 url: 'https://github.com/fandru/gcs-demo-mercaury.git']]])
                 sh 'cp -r ../repo1/* ../destination1'
                 sh 'ls -al'
+                sh 'git config --global user.email "fnelsonanburaj.26@gmail.com"'
+                sh 'git config --global user.email'
+                sh 'git config --global user.name "fandru"'
+                sh 'git config --global user.name'
                 sh 'git add -A'
                 sh 'git commit -m "moving all the files from Dev branch to QA branch"'
                 sh 'git push origin qa'
