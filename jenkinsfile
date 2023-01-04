@@ -20,7 +20,7 @@ pipeline {
           {
               
                checkout([$class: 'GitSCM',
-                branches: [[name: '*/main']],
+                branches: [[name: '*/qa']],
                 extensions: [], 
                 userRemoteConfigs: [[credentialsId: '68465bfa-5359-409f-bc8a-71b209a42298',
                 url: 'https://github.com/fandru/gcs-demo-mercaury.git']]])
@@ -32,7 +32,6 @@ pipeline {
                 sh 'git config --global user.name'                               
                 sh 'git init'
                 sh 'git add .'
-                sh 'git checkout qa'
                 sh 'git commit -m "first commit"'              
                 sh 'git remote add origin https://github.com/fandru/gcs-demo-mercaury.git'
                 
