@@ -32,10 +32,11 @@ pipeline {
                 sh 'git config --global user.name'                               
                 sh 'git init'
                 sh 'git add .'
-                sh 'git commit -m "first commit"'
+                
                 sh 'git remote remove origin'
                 sh 'git remote add dev "https://github.com/fandru/gcs-demo-mercaury.git"'
                 sh 'git remote -v'
+                sh 'git commit -m "first commit"'
                 sh 'git push -u dev qa'
                 
                 
