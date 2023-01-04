@@ -36,6 +36,8 @@ pipeline {
                 
                 sh 'git remote remove origin'
                 
+                sh 'git remote set-url origin https://github.com/fandru/gcs-demo-mercaury.git'
+                
                 sh 'git branch'
                 
                 sh 'git push origin qa'
