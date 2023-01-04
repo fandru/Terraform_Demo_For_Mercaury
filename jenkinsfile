@@ -19,6 +19,7 @@ pipeline {
                 
                 
                 sh 'ls -al'
+                sh 'pwd'
                  sh 'rm -r /Terraform_Demo_For_Mercaury/*'
                 sh 'ls -al'
                 sh 'rmdir /Terraform_Demo_For_Mercaury'
