@@ -35,7 +35,7 @@ pipeline {
                 sh 'git commit -m "first commit"'
                 sh 'git branch -M qa'
                 sh 'git remote add origin "https://github.com/fandru/gcs-demo-mercaury.git"'
-                sh 'git push -u origin qa
+                sh 'git push -u origin qa'
                 
                 
               
