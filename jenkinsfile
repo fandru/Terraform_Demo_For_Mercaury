@@ -16,18 +16,11 @@ pipeline {
                 sh 'git config --global user.name "fandru"'
                 sh 'git config --global user.name' 
                 sh 'pwd'
-                
-                
-                sh 'ls -al'
-                sh 'pwd'
-                 sh 'rm -r /Terraform_Demo_For_Mercaury/*'
-                sh 'ls -al'
-                sh 'rmdir /Terraform_Demo_For_Mercaury'
                
                 sh 'git init'
                 
                 sh 'git clone https://github.com/fandru/Terraform_Demo_For_Mercaury.git'
-                sh 'echo "files checkedout"'
+                sh 'echo "files checked out"'
           }    
           
           dir('destination1')
