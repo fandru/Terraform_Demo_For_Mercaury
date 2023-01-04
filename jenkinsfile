@@ -11,6 +11,10 @@ pipeline {
                 extensions: [], 
                 userRemoteConfigs: [[credentialsId: '68465bfa-5359-409f-bc8a-71b209a42298',
                 url: 'https://github.com/fandru/Terraform_Demo_For_Mercaury.git']]])
+                sh 'git config --global user.email "fnelsonanburaj.26@gmail.com"'
+                sh 'git config --global user.email'
+                sh 'git config --global user.name "fandru"'
+                sh 'git config --global user.name' 
                 sh 'pwd'
                 sh 'ls -al'
                 sh 'echo "files checkedout"'
