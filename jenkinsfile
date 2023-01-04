@@ -19,9 +19,9 @@ pipeline {
                 
                 
                 sh 'ls -al'
-                 sh 'rm -r ../Terraform_Demo_For_Mercaury/*'
+                 sh 'rm -r /Terraform_Demo_For_Mercaury/*'
                 sh 'ls -al'
-                sh 'rmdir ../Terraform_Demo_For_Mercaury'
+                sh 'rmdir /Terraform_Demo_For_Mercaury'
                
                 sh 'git init'
                 
