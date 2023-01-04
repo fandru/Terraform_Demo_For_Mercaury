@@ -40,8 +40,9 @@ pipeline {
                 sh 'git init'
                 sh 'git add .'
                 sh 'git commit -m "first commit"'    
+                
+                sh 'git remote set-url origin https://github.com/fandru/gcs-demo-mercaury.git'
                 sh 'git remote -v'
-                sh 'git remote add origin "https://github.com/fandru/gcs-demo-mercaury.git"'
                 sh 'git push -u origin qa'
 
 
