@@ -53,7 +53,7 @@ pipeline {
                  git add .
                  git commit -m "first commit"
                  git branch --show-current
-                 git remote set-url origin https://github.com/fandru/gcs-demo-mercaury.git
+                 git remote set-url origin git@github.com:fandru/gcs-demo-mercaury.git
                  git push origin main
 
                  '''
