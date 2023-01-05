@@ -53,6 +53,7 @@ pipeline {
                  git add .
                  git commit -m "first commit"
                  git branch --show-current
+                 git push origin main
 
                  '''
                 
