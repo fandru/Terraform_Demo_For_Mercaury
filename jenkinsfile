@@ -45,12 +45,10 @@ pipeline {
                  
                  cd ./gcs-demo-mercaury
                 echo "This is $(pwd)"
+                ls -al
                  '''
                 
-                
-                sh 'pwd'
-                
-                sh 'ls -al'                          
+                                        
                 
                 sh 'echo "files cloned"'
 
