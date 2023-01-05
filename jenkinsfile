@@ -41,8 +41,9 @@ pipeline {
                 sh script:'''
                   #!/bin/bash
                  echo "This is start $(pwd)"
-                 mkdir hello
-                 cd /var/lib/jenkins/workspace/dev to qa/destination1/gcs-demo-mercaury
+                 ls -al
+                 
+                 cd ./gcs-demo-mercaury
                 echo "This is $(pwd)"
                  '''
                 
