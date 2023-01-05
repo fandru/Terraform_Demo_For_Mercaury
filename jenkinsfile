@@ -38,11 +38,13 @@ pipeline {
                
                 sh 'git clone https://github.com/fandru/gcs-demo-mercaury.git'    
                 
-                sh 'cd /var/lib/jenkins/workspace/dev to qa/destination1/gcs-demo-mercaury/
-'
+                sh 'cd /var/lib/jenkins/workspace/dev to qa/destination1/gcs-demo-mercaury/'
                 
+                sh 'pwd'
                 
-                sh 'echo "files pushed"'
+                sh 'ls -al'                          
+                
+                sh 'echo "files cloned"'
 
 
                             
