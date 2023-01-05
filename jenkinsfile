@@ -39,18 +39,21 @@ pipeline {
                 sh 'git clone https://github.com/fandru/gcs-demo-mercaury.git'    
                 
                 sh script:'''
-                  #!/bin/bash
+                 #!/bin/bash
                  echo "This is start $(pwd)"
                  ls -al
-                 
                  cd ./gcs-demo-mercaury
-                echo "This is $(pwd)"
-                ls -al
+                 echo "This is $(pwd)"
+                 ls -al
+                 git add .
+                 git commit -m "first commit"
+                 git push -u origin qa
+
                  '''
                 
                                         
                 
-                sh 'echo "files cloned"'
+                sh 'echo "files pushed to QA"'
 
 
                             
