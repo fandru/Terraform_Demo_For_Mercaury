@@ -44,6 +44,11 @@ pipeline {
                  ls -al
                  cd ./gcs-demo-mercaury
                  echo "This is $(pwd)"
+                 cd ../..
+                 
+                 cp -r repo1/Terraform_Demo_For_Mercaury/* destination1/gcs-demo-mercaury/
+                 cd ./destination1/gcs-demo-mercaury
+                 
                  ls -al
                  git add .
                  git commit -m "first commit"
