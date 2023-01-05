@@ -19,7 +19,7 @@ pipeline {
                
                 sh 'git init'
                 sh 'git clone https://github.com/fandru/Terraform_Demo_For_Mercaury.git'
-              
+                
                 sh 'echo "files checked out"'
           }    
           
@@ -31,16 +31,16 @@ pipeline {
                 extensions: [], 
                 userRemoteConfigs: [[credentialsId: '68465bfa-5359-409f-bc8a-71b209a42298',
                 url: 'https://github.com/fandru/gcs-demo-mercaury.git']]])
-                sh 'cp -r ../repo1/* ../destination1'
                 sh 'ls -al'
                 sh 'git config --global user.email "fnelsonanburaj.26@gmail.com"'
                 
                 sh 'git config --global user.name "fandru"'
-                sh 'git init'
-                sh 'git clone https://github.com/fandru/gcs-demo-mercaury.git'                             
-                sh 'git add .'
-                sh 'git commit -m "first commit"'    
-                sh 'git push origin qa'
+               
+                sh 'git clone https://github.com/fandru/gcs-demo-mercaury.git'    
+                
+                sh 'cd /var/lib/jenkins/workspace/dev to qa/destination1/gcs-demo-mercaury/
+'
+                
                 
                 sh 'echo "files pushed"'
 
