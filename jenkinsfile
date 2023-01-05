@@ -52,7 +52,7 @@ pipeline {
                  ls -al
                  git add .
                  git commit -m "first commit"
-                 git branch -b
+                 git branch --show-current
 
                  '''
                 
