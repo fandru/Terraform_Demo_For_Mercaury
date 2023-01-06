@@ -18,7 +18,8 @@ pipeline {
                 sh 'pwd'
                
                 sh 'git init'
-                sh 'git clone https://<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>@github.com/<fandru>/<Terraform_Demo_For_Mercaury>.git'
+                
+                sh 'git clone https://github.com/fandru/Terraform_Demo_For_Mercaury.git'
 
                 
                 sh 'echo "files checked out"'
@@ -37,7 +38,8 @@ pipeline {
                 
                 sh 'git config --global user.name "fandru"'
                
-                 sh 'git clone https://<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>@github.com/<fandru>/<gcs-demo-mercaury>.git'
+                sh 'git clone https://github.com/fandru/gcs-demo-mercaury.git'
+                
 
 
 
